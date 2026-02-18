@@ -25,6 +25,8 @@ jobs:
         run: |
           sudo apt install splint
       - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Run Splint
         run: |
           splint --compdef --exportlocal simplecalculator.c operations.c
   building-and-delivery:
